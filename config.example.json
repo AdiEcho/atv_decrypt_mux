@@ -1,0 +1,18 @@
+{
+    "m3u8_url": "",
+    "download_definition": ["1080p", "4k", "4k_hdr", "4k_dv"],
+    "N_m3u8DL_setting": {
+        "save_dir": "./Downloads",
+        "save_name": "",
+        "headers": ["User-Agent: iOS"],
+        "extra_args": ["-M format=mkv:muxer=mkvmerge"],
+        "key_text_file": "./keys",
+        "default_audio_language": "en",
+        "default_audio_id": "audio-ac3_vod-ak-amt.tv.apple.com",
+        "default_subtitle_language": "all",
+        "default_subtitle_id": "subtitles_vod-ak-amt.tv.apple.com"
+    },
+    "bin_path": {
+        "N_m3u8DL-RE": "./N_m3u8DL-RE.exe"
+    }
+}
