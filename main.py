@@ -35,8 +35,6 @@ def gen_cmd():
     dl_settings = config["N_m3u8DL_setting"]
     if save_dir := dl_settings.get("save_dir"):
         extra_cmd += f' --save-dir "{save_dir}"'
-    if save_name := dl_settings.get("save_name"):
-        extra_cmd += f' --save-name "{save_name}"'
     if headers := dl_settings.get("headers"):
         for header in headers:
             extra_cmd += f' -H "{header}"'
@@ -59,6 +57,9 @@ def gen_cmd():
     for definition in download_definition:
         # add video, audio, subtitle, etc. settings
         __extra_cmd = extra_cmd
+        # save name with definition
+        if save_name := dl_settings.get("save_name"):
+            __extra_cmd += f' --save-name "{save_name.replace(" ", ".")}.{definition.replace("_", ".")}.mp4"'
         if definition == "1080p":
             __extra_cmd += ' -sv res="19*":codecs="avc1*":range=SDR:for=best'
         elif definition == "4k":
