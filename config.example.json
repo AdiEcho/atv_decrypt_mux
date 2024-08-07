@@ -6,7 +6,7 @@
         "save_name": "",
         "headers": ["User-Agent: iOS"],
         "extra_args": ["-M format=mkv:muxer=mkvmerge"],
-        "key_text_file": "./keys",
+        "key_text_file": "./keys.txt",
         "default_audio_language": "en",
         "default_audio_id": "audio-ac3_vod-ak-amt.tv.apple.com",
         "default_subtitle_language": "all",

@@ -60,7 +60,7 @@ def gen_cmd():
         # add video, audio, subtitle, etc. settings
         __extra_cmd = extra_cmd
         if definition == "1080p":
-            __extra_cmd += ' -sv res="1918*":codec="avc1*":range=SDR:for=best'
+            __extra_cmd += ' -sv res="19*":codecs="avc1*":range=SDR:for=best'
         elif definition == "4k":
             __extra_cmd += f' -sv codecs="hvc1*":range=SDR:for=best'
         elif definition == "4k_hdr":
